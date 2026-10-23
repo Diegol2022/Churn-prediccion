@@ -18,6 +18,31 @@ En este proyecto se entrena un modelo de **clasificación binaria (Logistic Regr
 └── README.md
 ```
 
+## Datos: de dónde descargarlos
+
+El dataset **ya viene incluido** en el repositorio, en `data/Telco-Customer-Churn.csv`. Si por algún motivo no está, o querés bajarlo de nuevo, podés descargarlo desde cualquiera de estas fuentes.
+
+**Opción A: repositorio oficial de IBM en GitHub (recomendada)**
+1. Entrá a la página del archivo: [github.com/IBM/telco-customer-churn-on-icp4d/blob/master/data/Telco-Customer-Churn.csv](https://github.com/IBM/telco-customer-churn-on-icp4d/blob/master/data/Telco-Customer-Churn.csv).
+2. Hacé clic en el botón de descarga (**Download raw file**, el ícono ⬇ arriba a la derecha del archivo).
+3. El archivo ya se llama `Telco-Customer-Churn.csv`, no hace falta renombrarlo.
+
+**Opción B: Kaggle**
+1. Entrá a [kaggle.com/datasets/blastchar/telco-customer-churn](https://www.kaggle.com/datasets/blastchar/telco-customer-churn). Necesitás una cuenta gratuita de Kaggle.
+2. Hacé clic en **Download** y descomprimí el `.zip`.
+3. El archivo se llama `WA_Fn-UseC_-Telco-Customer-Churn.csv`. **Renombralo** a `Telco-Customer-Churn.csv`.
+
+**Dónde guardarlo:** en ambos casos, poné el archivo dentro de la carpeta `data/` del proyecto, junto al notebook:
+
+```
+<carpeta-del-proyecto>/
+├── data/
+│   └── Telco-Customer-Churn.csv   ← acá
+└── modelado_metricas.ipynb
+```
+
+Si la carpeta `data/` no existe, creala. El notebook busca el archivo exactamente en la ruta `data/Telco-Customer-Churn.csv`.
+
 ---
 
 ## Paso a paso para ejecutar el notebook en Visual Studio Code
@@ -44,6 +69,8 @@ git clone https://github.com/<tu-usuario>/<nombre-del-repo>.git
 ```
 
 **Opción B: sin Git.** En la página del repositorio en GitHub, hacé clic en **Code → Download ZIP** y descomprimilo.
+
+Después verificá que exista el archivo `data/Telco-Customer-Churn.csv`. Si no está, descargalo como se explica en la sección [Datos: de dónde descargarlos](#datos-de-dónde-descargarlos).
 
 ### Paso 3: Abrir la carpeta en VS Code
 
@@ -121,7 +148,7 @@ Si quedó bien activado, vas a ver `(.venv)` al principio de la línea de la ter
 | `'python' no se reconoce como un comando` (Windows) | Python no se agregó al PATH. Reinstalalo tildando **"Add python.exe to PATH"**, o probá con `py` en lugar de `python`. |
 | En PowerShell: *"la ejecución de scripts está deshabilitada en este sistema"* al activar `.venv` | Ejecutá `Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned`, respondé `S`, y volvé a activar. También podés cambiar la terminal a **Command Prompt** desde el menú ⌄ de la terminal. |
 | `ModuleNotFoundError: No module named 'pandas'` (u otra librería) | El kernel no es `.venv` (ver el Paso 6), o faltó instalar las dependencias: ejecutá `pip install -r requirements.txt` con el entorno activado. |
-| `FileNotFoundError: data/Telco-Customer-Churn.csv` | Abriste el notebook suelto y no la carpeta del proyecto (ver el Paso 3), o falta el CSV dentro de `data/`. |
+| `FileNotFoundError: data/Telco-Customer-Churn.csv` | Abriste el notebook suelto y no la carpeta del proyecto (ver el Paso 3), o falta el CSV dentro de `data/`. En ese caso, descargalo como se explica en la sección **Datos: de dónde descargarlos** y verificá que tenga exactamente ese nombre. |
 | No aparece `.venv` en **Select Kernel** | Cerrá y volvé a abrir VS Code, o elegí **Python Environments…** y esperá a que cargue la lista. |
 | El notebook pide `ipykernel` | Aceptá **Install**, o ejecutá `pip install ipykernel` con el entorno activado. |
 
@@ -162,4 +189,5 @@ Python · pandas · NumPy · scikit-learn · matplotlib · seaborn · Jupyter ·
 
 ## Fuente de datos
 
-[Telco Customer Churn — IBM](https://github.com/IBM/telco-customer-churn-on-icp4d)
+- [Telco Customer Churn — IBM (GitHub)](https://github.com/IBM/telco-customer-churn-on-icp4d)
+- [Telco Customer Churn — Kaggle](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)
