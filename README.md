@@ -65,7 +65,7 @@ Esto se hace una sola vez por computadora.
 
 **Opción A: con Git.** Abrí una terminal y ejecutá:
 ```bash
-git clone https://github.com/<tu-usuario>/<nombre-del-repo>.git
+git clone https://github.com/Diego2022/Churn-prediccion.git
 ```
 
 **Opción B: sin Git.** En la página del repositorio en GitHub, hacé clic en **Code → Download ZIP** y descomprimilo.
